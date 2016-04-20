@@ -10,7 +10,7 @@ sudo: true
 ## Adding openjdk7 is probably a sensible thing, but means I have to 
 ## edit the ant build.xml file which is unfortunate.
 jdk:
-   - openjdk8
+   - oraclejdk8
 
 ## I will need to set something up to catch these. 
 notifications:
