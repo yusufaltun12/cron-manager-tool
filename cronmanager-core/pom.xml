@@ -24,8 +24,6 @@
 		<jackson.version>1.9.10</jackson.version>
 		<aspectj.version>1.8.2</aspectj.version>
 		<jdk.version>1.8</jdk.version>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
