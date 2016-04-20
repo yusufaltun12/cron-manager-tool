@@ -1,0 +1,6 @@
+img.path=/thyssen/media/
+
+db.connection=jdbc:mysql://31.210.55.49:3306/thyssen?useUnicode=true&characterEncoding=UTF-8
+db.username=root
+db.password=[PASSWORD]
+machine.sim.url=http://localhost:8080/tag/values
