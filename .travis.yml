@@ -10,3 +10,4 @@ install: true
 script:
   - mvn clean install -pl cronmanager-core -am
   - mvn clean install -pl cronmanager-runner -am
+  - mvn clean install -pl cronmanager-ui -am
