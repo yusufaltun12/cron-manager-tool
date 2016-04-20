@@ -1,4 +1,4 @@
-package com.qualist.cronmanager.entity;
+package com.ysfaltn.cronmanager.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Type;

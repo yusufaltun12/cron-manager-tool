@@ -1,11 +1,11 @@
-package com.qualist.cronmanager;
+package com.ysfaltn.cronmanager;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.qualist.cronmanager.repository.JobRepository;
-import com.qualist.cronmanager.repository.ParamRepository;
-import com.qualist.cronmanager.repository.ResultRepository;
+import com.ysfaltn.cronmanager.repository.JobRepository;
+import com.ysfaltn.cronmanager.repository.ParamRepository;
+import com.ysfaltn.cronmanager.repository.ResultRepository;
 
 public class Context 
 {

@@ -1,4 +1,4 @@
-package com.qualist.cronmanager;
+package com.ysfaltn.cronmanager;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,8 +11,8 @@ import org.quartz.JobKey;
 import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
 
-import com.qualist.cronmanager.entity.JobEntity;
-import com.qualist.cronmanager.entity.ParamEntity;
+import com.ysfaltn.cronmanager.entity.JobEntity;
+import com.ysfaltn.cronmanager.entity.ParamEntity;
 
 public class SchedulerBuilder 
 {

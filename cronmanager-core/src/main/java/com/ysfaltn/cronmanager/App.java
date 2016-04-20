@@ -1,12 +1,12 @@
-package com.qualist.cronmanager;
+package com.ysfaltn.cronmanager;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.qualist.cronmanager.entity.JobEntity;
-import com.qualist.cronmanager.repository.JobRepository;
+import com.ysfaltn.cronmanager.entity.JobEntity;
+import com.ysfaltn.cronmanager.repository.JobRepository;
 
  
 @Configuration

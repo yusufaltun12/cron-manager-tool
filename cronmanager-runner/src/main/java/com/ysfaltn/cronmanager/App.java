@@ -1,12 +1,12 @@
-package com.qualist.cronmanager;
+package com.ysfaltn.cronmanager;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.quartz.impl.StdSchedulerFactory;
 
-import com.qualist.cronmanager.entity.JobEntity;
-import com.qualist.cronmanager.entity.ParamEntity;
+import com.ysfaltn.cronmanager.entity.JobEntity;
+import com.ysfaltn.cronmanager.entity.ParamEntity;
 
 /**
  * Hello world!

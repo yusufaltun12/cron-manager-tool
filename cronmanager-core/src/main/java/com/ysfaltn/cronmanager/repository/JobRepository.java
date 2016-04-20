@@ -1,6 +1,7 @@
-package com.qualist.cronmanager.repository;
+package com.ysfaltn.cronmanager.repository;
 
-import com.qualist.cronmanager.entity.JobEntity;
+import com.ysfaltn.cronmanager.entity.JobEntity;
+
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

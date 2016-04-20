@@ -1,4 +1,4 @@
-package com.qualist.cronmanager.repository;
+package com.ysfaltn.cronmanager.repository;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.qualist.cronmanager.entity.JobEntity;
-import com.qualist.cronmanager.entity.ParamEntity;
+import com.ysfaltn.cronmanager.entity.JobEntity;
+import com.ysfaltn.cronmanager.entity.ParamEntity;
 
 
 @Repository

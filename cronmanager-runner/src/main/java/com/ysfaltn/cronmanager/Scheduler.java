@@ -1,4 +1,4 @@
-package com.qualist.cronmanager;
+package com.ysfaltn.cronmanager;
 
 import org.quartz.JobDetail;
 import org.quartz.Trigger;

@@ -1,4 +1,4 @@
-package com.qualist.cronmanager;
+package com.ysfaltn.cronmanager;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -11,10 +11,10 @@ import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
-import com.qualist.cronmanager.entity.JobEntity;
-import com.qualist.cronmanager.entity.ParamEntity;
-import com.qualist.cronmanager.entity.ResultEntity;
-import com.qualist.cronmanager.repository.ResultRepository;
+import com.ysfaltn.cronmanager.entity.JobEntity;
+import com.ysfaltn.cronmanager.entity.ParamEntity;
+import com.ysfaltn.cronmanager.entity.ResultEntity;
+import com.ysfaltn.cronmanager.repository.ResultRepository;
 
 /**
  * Created by Yusuf on 8.4.2016.

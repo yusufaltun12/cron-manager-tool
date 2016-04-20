@@ -1,4 +1,4 @@
-package com.qualist.cronmanager.entity;
+package com.ysfaltn.cronmanager.entity;
 
 import javax.persistence.*;
 

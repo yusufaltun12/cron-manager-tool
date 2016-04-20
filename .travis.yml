@@ -9,9 +9,7 @@ install: mvn clean install
 ## Adding openjdk7 is probably a sensible thing, but means I have to 
 ## edit the ant build.xml file which is unfortunate.
 jdk:
-  - openjdk6
-  - openjdk7
-  - openjdk8
+   - openjdk8
 
 ## I will need to set something up to catch these. 
 notifications:

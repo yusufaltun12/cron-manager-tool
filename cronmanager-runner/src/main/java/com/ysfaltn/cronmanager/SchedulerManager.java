@@ -1,4 +1,4 @@
-package com.qualist.cronmanager;
+package com.ysfaltn.cronmanager;
 
 public class SchedulerManager 
 {
