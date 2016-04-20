@@ -1,4 +1,4 @@
-package com.qualist.cronmanager.model;
+package com.ysfaltn.cronmanager.model;
 
 import com.qualist.cronmanager.entity.ResultEntity;
 

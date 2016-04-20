@@ -1,4 +1,4 @@
-package com.qualist.cronmanager.controller;
+package com.ysfaltn.cronmanager.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

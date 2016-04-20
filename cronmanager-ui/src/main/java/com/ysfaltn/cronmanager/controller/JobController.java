@@ -1,4 +1,4 @@
-package com.qualist.cronmanager.controller;
+package com.ysfaltn.cronmanager.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.qualist.cronmanager.entity.JobEntity;
 import com.qualist.cronmanager.entity.ResultEntity;
-import com.qualist.cronmanager.model.JobDTO;
-import com.qualist.cronmanager.model.ResultDTO;
 import com.qualist.cronmanager.repository.JobRepository;
 import com.qualist.cronmanager.repository.ResultRepository;
+import com.ysfaltn.cronmanager.model.JobDTO;
+import com.ysfaltn.cronmanager.model.ResultDTO;
 
 @Controller
 @RequestMapping(value = "/job")
