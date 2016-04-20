@@ -1,0 +1,5 @@
+img.path=/home/taner/tmp/thyssen/media/
+
+db.connection=jdbc:mysql://localhost:3306/thyssen?useUnicode=true&characterEncoding=UTF-8
+db.username=root
+db.password=eternal
