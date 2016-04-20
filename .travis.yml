@@ -2,7 +2,11 @@ language: java
 
 ## do everything in HermiT directory
 ## this installs dependencies. Ant needs no installation because they are already there.
-install: mvn clean install -pl cronmanager-core;mvn clean install -pl cronmanager-runner
+install: true
+
+script: 
+	- mvn clean install -pl cronmanager-core -am
+	- mvn clean install -pl cronmanager-runner -am
 
 sudo: true 
 
