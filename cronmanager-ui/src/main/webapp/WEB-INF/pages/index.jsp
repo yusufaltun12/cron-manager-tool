@@ -1,13 +1,21 @@
-<%@page pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ <html lang="en">
 <head>
-	<title></title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script type="text/javascript">
- 		
-		$(document).ready(function(){ 
+<meta charset="UTF-8">
+<title>Example of Bootstrap 3 List Group Contextual Classes</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){ 
 		$.urlParam = function(name){
 		    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
 		    if (results==null){
@@ -28,7 +36,7 @@
 			{
 				var trHTML = '';
 		        $.each(jobs, function (i, item) {
-		            trHTML += '<tr><td>' + jobs[i].jobName + '</td><td>' + jobs[i].period + '</td><td>' + jobs[i].executableFilePath + '</td><td> </td><td><a href="/job-detail/?id='+jobs[i].id+'" >Go</a></td></tr>';
+		            trHTML += '<tr class="row"><td>' + jobs[i].jobName + '</td><td>' + jobs[i].period + '</td><td>' + jobs[i].executableFilePath + '</td><td> </td><td><a href="/job-detail/?id='+jobs[i].id+'" >Go</a></td></tr>';
 		        });
 		        $('#jobs-table').append(trHTML);
 			},
@@ -38,26 +46,35 @@
 			}
 		});
 	});
-	</script>
+</script>
 </head>
 <body>
-	<div>
-		<div style="width: 100%; border: 1px silver solid; height: 40px;">QUALIST Cron Job Manager Tool</div>
-		<div style="width: 100%; border: 1px silver solid; height: 500px;">
-			<div style="float: left; width: 20%; border: 1px silver solid; height: 100%"></div>
-			<div style="float: left; width: 70%;  height: 100%">
-				<table style="width: 100%" id="jobs-table">
-					<thead>
-						<th>Job Adı</th>
-						<th>Çalışma Periyodu</th>
-						<th>Çalıştırılabilir Dosya</th>
-						<th>Son Çalışma Zamanı</th>
-						<th>Git</th>
-					</thead>
-				</table>
-			</div>
-		</div>
-
+<div class="row" style="height: 100px; border: 1px silver solid; margin: 20px">
+</div>
+<div class="col-sm-3">
+	<ul class="nav nav-pills nav-stacked bs-example" id="results-list">
+        <li class="list-group-item list-group-item-success"><a href="#">Job Olustur</a></li>
+        <li class="list-group-item list-group-item-success"><a href="#">Script Yaz</a></li>
+        <li class="list-group-item list-group-item-success"><a href="#">Ayarlar</a></li>
+	</ul>
+</div>
+<div class="col-sm-9">
+	<div id="description">
+		<table style="width: 100%" id="jobs-table" class="table table-bordered">
+			<thead>
+				<tr class="row">
+					<th>Job Adi</th>
+					<th>Çalisma Periyodu</th>
+					<th>Calistirilabilir Dosya</th>
+					<th>Son Calismma Zamani</th>
+					<th>Git</th>
+				</tr>	
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
 	</div>
+</div>
+
 </body>
 </html>

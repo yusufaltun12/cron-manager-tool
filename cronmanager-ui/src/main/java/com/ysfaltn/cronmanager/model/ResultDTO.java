@@ -1,37 +1,62 @@
 package com.ysfaltn.cronmanager.model;
 
-import com.qualist.cronmanager.entity.ResultEntity;
+import com.ysfaltn.cronmanager.entity.ResultEntity;
 
-public class ResultDTO 
+public class ResultDTO
 {
 	private int id;
 	private String description;
 	private String date;
+	private ResultStatus resultStatus;
+
 	public static ResultDTO from(ResultEntity entity)
 	{
 		ResultDTO resultDTO = new ResultDTO();
 		resultDTO.id = entity.getId();
 		resultDTO.description = entity.getDescription();
 		resultDTO.date = entity.getCreatedAt().toString();
-		
+		resultDTO.resultStatus = ResultStatus.valueOf(entity.getStatus());
+
 		return resultDTO;
 	}
-	public int getId() {
+
+	public ResultStatus getResultStatus()
+	{
+		return resultStatus;
+	}
+
+	public void setResultStatus(ResultStatus resultStatus)
+	{
+		this.resultStatus = resultStatus;
+	}
+
+	public int getId()
+	{
 		return id;
 	}
-	public void setId(int id) {
+
+	public void setId(int id)
+	{
 		this.id = id;
 	}
-	public String getDescription() {
+
+	public String getDescription()
+	{
 		return description;
 	}
-	public void setDescription(String description) {
+
+	public void setDescription(String description)
+	{
 		this.description = description;
 	}
-	public String getDate() {
+
+	public String getDate()
+	{
 		return date;
 	}
-	public void setDate(String date) {
+
+	public void setDate(String date)
+	{
 		this.date = date;
 	}
 }
