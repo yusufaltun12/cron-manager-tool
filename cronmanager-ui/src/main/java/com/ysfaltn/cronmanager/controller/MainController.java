@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(value = "/")
-public class MainController 
+public class MainController
 {
 	@RequestMapping(method = RequestMethod.GET)
 	public String goMainPage()
 	{
 		return "index";
 	}
-	
+
 	@RequestMapping(value = "job-detail", method = RequestMethod.GET)
 	public String goJobDetail()
 	{

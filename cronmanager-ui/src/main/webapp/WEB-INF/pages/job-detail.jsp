@@ -16,16 +16,8 @@
 </style>
 <script type="text/javascript">
 	$(document).ready(function(){ 
-		$.urlParam = function(name){
-		    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-		    if (results==null){
-		       return null;
-		    }
-		    else{
-		       return results[1] || 0;
-		    }
-		}
-		var jobId=$.urlParam('id');
+		
+		var jobId=${jobId}
 		var results;
 		$.ajax({
 			type : "GET",
