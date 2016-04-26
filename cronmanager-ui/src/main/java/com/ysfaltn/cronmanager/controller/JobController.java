@@ -131,7 +131,7 @@ public class JobController
 		String fileNameWithDirectoryPath = null;
 		if (!"".equalsIgnoreCase(fileName))
 		{
-			String fullPath = Config.filePath + "/" + jobName + "/";
+			String fullPath = Config.filePath + jobName + "/";
 			File workSpaceDirectory = new File(Config.filePath + jobName);
 			if (!workSpaceDirectory.exists())
 			{
