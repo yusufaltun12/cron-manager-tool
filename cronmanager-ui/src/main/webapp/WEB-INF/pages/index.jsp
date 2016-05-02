@@ -59,7 +59,7 @@
 		<ul class="nav nav-pills nav-stacked bs-example" id="results-list">
 			<li class="list-group-item list-group-item-success"><a href="#"
 				data-toggle="modal" data-target="#create-job">Job Olustur</a></li>
-			<li class="list-group-item list-group-item-success"><a href="#">Script
+			<li class="list-group-item list-group-item-success"><a href="#" data-toggle="modal" data-target="#create-script">Script
 					Yaz</a></li>
 			<li class="list-group-item list-group-item-success"><a href="#">Ayarlar</a></li>
 		</ul>
@@ -106,6 +106,53 @@
 							<label for="period" class="form-control-label">Calistirilabilir Dosya</label> 
 								<input id="executable-file" name="executable-file"
 								type="file" class="file-loading">
+						</div>
+						<div class="form-group">
+							<label for="period" class="form-control-label">Harici Dosyalar</label> 
+							<input id="external-files" name="external-files"
+								type="file" multiple class="file-loading">
+						</div>
+						<div class="form-group">
+							<label for="arg" class="form-control-label">Args</label><br>
+							<label for="arg" class="form-control-label"
+								id="args-input-error"></label><br>
+							<input type="text" id="arg" name="arg" /> <a href="#" id="add-arg">Ekle</a>
+							<input type="hidden" id="args" name="args" />
+							<div id="args-displayer" class="form-control-label"></div>
+						</div>
+						<button class="btn btn-default" type="submit">Kaydet</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="modal fade" id="create-script" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Script Olustur</h4>
+				</div>
+				<div class="modal-body">
+					<form enctype="multipart/form-data" action="/job/create-script"
+						method="POST">
+						<div class="form-group">
+							<label for="job-name" class="form-control-label">Job Adi</label>
+							<input type="text" class="form-control" id="job-name"
+								name="job-name">
+						</div>
+						<div class="form-group">
+							<label for="period" class="form-control-label">Period</label>
+							<textarea class="form-control" id="period" name="period"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="script-text" class="form-control-label">Script</label> 
+							<textarea name="script-text"> </textarea>	
 						</div>
 						<div class="form-group">
 							<label for="period" class="form-control-label">Harici Dosyalar</label> 

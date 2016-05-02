@@ -1,6 +1,8 @@
 package com.ysfaltn.cronmanager.controller;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -107,6 +109,56 @@ public class JobController
 
 		jobEntity = jobRepository.save(jobEntity);
 		System.err.println(jobEntity.getId());
+		String[] argsSplitted = args.split(" ");
+		for (String string : argsSplitted)
+		{
+			ParamEntity paramEntity = new ParamEntity();
+			paramEntity.setJob(jobEntity);
+			paramEntity.setParam(string);
+			paramEntities.add(paramEntity);
+		}
+
+		for (MultipartFile file : externalFiles)
+		{
+			uploadFile(file, jobName);
+		}
+
+		paramRepository.save(paramEntities);
+		return "redirect:/";
+	}
+
+	@RequestMapping(value = "/create-script", method = RequestMethod.POST)
+	public String createScript(@RequestParam("job-name") String jobName,
+			@RequestParam("period") String period,
+			@RequestParam("script-text") String scriptText,
+			@RequestParam("external-files") List<MultipartFile> externalFiles,
+			@RequestParam("args") String args) throws IllegalStateException, IOException
+	{
+		JobEntity jobEntity = new JobEntity();
+		List<ParamEntity> paramEntities = new ArrayList<ParamEntity>();
+
+		String fullFilePath = Config.filePath + jobName;
+		File scriptFileDirectory = new File(fullFilePath);
+
+		if (!scriptFileDirectory.exists())
+		{
+			scriptFileDirectory.mkdir();
+		}
+		String filePath = fullFilePath + "/" + jobName + ".bat";
+		File scriptFile = new File(filePath);
+		FileWriter fw = new FileWriter(scriptFile.getAbsoluteFile());
+		BufferedWriter bw = new BufferedWriter(fw);
+		bw.write(scriptText);
+		bw.close();
+
+		String extention = filePath.split(Pattern.quote("."))[fullFilePath.split(Pattern.quote(".")).length - 1];
+		jobEntity.setExecutableFilePath(filePath);
+		jobEntity.setFileType(extention.toUpperCase());
+		jobEntity.setGroupName(jobName);
+		jobEntity.setJobName(jobName);
+		jobEntity.setSchedule(period);
+
+		jobEntity = jobRepository.save(jobEntity);
 		String[] argsSplitted = args.split(" ");
 		for (String string : argsSplitted)
 		{
